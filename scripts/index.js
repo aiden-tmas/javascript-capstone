@@ -28,9 +28,7 @@ console.log(userList);
 firstNames.catch((err) => console.error("something went wrong", err));
 
 const nameList = document.getElementById("names-li");
-
 const chosenList = [];
-
 const shuffleButton = document.getElementById("shuffle-button");
 
 function switchName(name) {
@@ -79,7 +77,16 @@ function addPerson(personName) {
   });
 }
 
-function shufflePeople() {
+function chosenCheck(name) {
+  for (i in chosenList) {
+    if (chosenList[i] === name) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function determineVictim() {
   let student = Math.floor(Math.random() * userList.length);
   if (chosenCheck(userList[student])) {
     switchName(userList[student]);
@@ -89,11 +96,12 @@ function shufflePeople() {
   }
 }
 
-function chosenCheck(name) {
-  for (i in chosenList) {
-    if (chosenList[i] === name) {
-      return false;
-    }
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+async function main() {
+  for (let name of userList) {
+    await sleep(100);
+    switchName(name);
   }
-  return true;
+
+  determineVictim();
 }
