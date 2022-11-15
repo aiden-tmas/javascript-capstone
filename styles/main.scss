@@ -14,13 +14,57 @@ body {
   .student-list-container {
     width: 15%;
     min-width: 250px;
-    height: 100%;
     background-color: #050060;
     color: rgb(230, 230, 230);
+    overflow: scroll;
+
     .top-text {
       h6 {
         display: flex;
         justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .student-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-block: 20px;
+
+      .student-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+
+        .buttons {
+          button {
+            color: rgb(230, 230, 230);
+            border: none;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          .plus-button {
+            background-color: rgb(0, 192, 0);
+            &:hover {
+              background-color: rgb(0, 133, 0);
+            }
+          }
+
+          .minus-button {
+            padding-inline: 7px;
+            background-color: red;
+            &:hover {
+              background-color: rgb(210, 0, 0);
+            }
+          }
+        }
       }
     }
   }

@@ -14,13 +14,48 @@ body {
 .page-main-container .student-list-container {
   width: 15%;
   min-width: 250px;
-  height: 100%;
   background-color: #050060;
   color: rgb(230, 230, 230);
+  overflow: scroll;
 }
 .page-main-container .student-list-container .top-text h6 {
   display: flex;
   justify-content: center;
+  width: 100%;
+}
+.page-main-container .student-list-container .student-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-block: 20px;
+}
+.page-main-container .student-list-container .student-container .student-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.page-main-container .student-list-container .student-container .student-wrapper .buttons button {
+  color: rgb(230, 230, 230);
+  border: none;
+}
+.page-main-container .student-list-container .student-container .student-wrapper .buttons button:hover {
+  cursor: pointer;
+}
+.page-main-container .student-list-container .student-container .student-wrapper .buttons .plus-button {
+  background-color: rgb(0, 192, 0);
+}
+.page-main-container .student-list-container .student-container .student-wrapper .buttons .plus-button:hover {
+  background-color: rgb(0, 133, 0);
+}
+.page-main-container .student-list-container .student-container .student-wrapper .buttons .minus-button {
+  padding-inline: 7px;
+  background-color: red;
+}
+.page-main-container .student-list-container .student-container .student-wrapper .buttons .minus-button:hover {
+  background-color: rgb(210, 0, 0);
 }
 .page-main-container .selection-section-wrapper {
   width: 85%;

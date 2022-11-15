@@ -38,27 +38,39 @@ function switchName(name) {
 }
 
 function addPerson(personName) {
-  const mainDiv = document.getElementById("students");
+  const parentDiv = document.getElementById("students-container");
+  const mainDiv = document.createElement("div");
   const studentDiv = document.createElement("div");
   const name = document.createElement("span");
   const score = document.createElement("span");
   const addButton = document.createElement("button");
   const minusButton = document.createElement("button");
   const enter = document.createElement("br");
+  const buttons = document.createElement("div");
 
+  mainDiv.className = "student-container";
+  studentDiv.className = "student-wrapper";
   score.innerText = "1";
   addButton.innerText = "+";
+  addButton.className = "plus-button";
   minusButton.innerText = "-";
+  minusButton.className = "minus-button";
   name.innerText = `${personName} : `;
+  buttons.className = "buttons";
 
   name.appendChild(score);
+
+  buttons.appendChild(addButton);
+  buttons.appendChild(minusButton);
+
   studentDiv.appendChild(name);
-  studentDiv.appendChild(score);
   studentDiv.appendChild(enter);
-  studentDiv.appendChild(addButton);
-  studentDiv.appendChild(minusButton);
+  studentDiv.appendChild(buttons);
+  // studentDiv.appendChild(addButton);
+  // studentDiv.appendChild(minusButton);
 
   mainDiv.appendChild(studentDiv);
+  parentDiv.appendChild(mainDiv);
 
   addButton.addEventListener("click", (e) => {
     e.target.parentElement.firstElementChild.nextSibling.innerText =
