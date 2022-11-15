@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Student Picker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+
+  <body>
+    <div class="page-main-container">
+      <div class="student-list-container" id="students">
+        <div class="top-text">
+          <h6>The heavier they are, the harder they fall.</h6>
+          <hr />
+        </div>
+      </div>
+
+      <div class="selection-section-wrapper">
+        <div class="shuffle-button-wrapper">
+          <h1 id="poor-soul">A poor soul:</h1>
+          <button id="shuffle-button" onclick="shufflePeople()">
+            Determine your next victim.
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts/index.js"></script>
+  </body>
+</html>

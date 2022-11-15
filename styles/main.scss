@@ -1,0 +1,63 @@
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+}
+
+.page-main-container {
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  .student-list-container {
+    width: 15%;
+    min-width: 250px;
+    height: 100%;
+    background-color: #050060;
+    color: rgb(230, 230, 230);
+    .top-text {
+      h6 {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .selection-section-wrapper {
+    width: 85%;
+    // min-width: 1000px;
+    height: 100%;
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .shuffle-button-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      h1 {
+        font-size: 75px;
+      }
+
+      button {
+        width: 40%;
+        background-color: #050060;
+        color: rgb(242, 242, 242);
+        border: none;
+        padding-block: 30px;
+        border-radius: 3px;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: #030043;
+      }
+    }
+  }
+}
