@@ -73,19 +73,34 @@ function addPerson(personName) {
   parentDiv.appendChild(mainDiv);
 
   addButton.addEventListener("click", (e) => {
-    e.target.parentElement.firstElementChild.nextSibling.innerText =
-      Number(e.target.parentElement.firstElementChild.nextSibling.innerText) +
-      1;
+    e.target.parentElement.parentElement.firstElementChild.firstElementChild.innerText =
+      Number(
+        e.target.parentElement.parentElement.firstElementChild.firstElementChild
+          .innerText
+      ) + 1;
+    console.log(
+      e.target.parentElement.parentElement.firstElementChild.firstElementChild
+        .innerText
+    );
   });
 
   minusButton.addEventListener("click", (e) => {
     if (
-      Number(e.target.parentElement.firstElementChild.nextSibling.innerText) > 0
+      Number(
+        e.target.parentElement.parentElement.firstElementChild.firstElementChild
+          .innerText
+      ) > 0
     ) {
-      e.target.parentElement.firstElementChild.nextSibling.innerText =
-        Number(e.target.parentElement.firstElementChild.nextSibling.innerText) -
-        1;
+      e.target.parentElement.parentElement.firstElementChild.firstElementChild.innerText =
+        Number(
+          e.target.parentElement.parentElement.firstElementChild
+            .firstElementChild.innerText
+        ) - 1;
     }
+    console.log(
+      e.target.parentElement.parentElement.firstElementChild.firstElementChild
+        .innerText
+    );
   });
 }
 
